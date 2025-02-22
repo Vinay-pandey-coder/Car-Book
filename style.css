@@ -25,6 +25,9 @@ body{
     color: var(--text-color);
     background-color: var(--bg-color);
 }
+.content{
+    overflow: hidden;
+}
 /* custom scroll */
 html::-webkit-scrollbar{
     width: 0.5rem;
@@ -182,6 +185,20 @@ header{
     top: -80px;
     color: #fa7c42;
     z-index: -1;
+    transform: translateX(-60px);
+    transition: trsnsform 2.5s ease, opacity 2.5s ease;
+    animation: reavealfromright 2.5s ease forwards;
+    animation-delay: 0.4s;
+}
+@keyframes reavealfromright{
+    0%{
+        transform: translateX(-60px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .input-form{
